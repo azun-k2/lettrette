@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lettrette — sample files</title>
+<meta name="description" content="Sample winmail.dat and .msg files to try in Lettrette: messages with pictures and attachments, an attached message, a meeting invitation, a contact card and a folder for batch export.">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="stylesheet" href="../style.css">
+<style>
+  a.download {
+    display: inline-block; margin: 6px 0 4px; padding: 11px 20px; border-radius: 999px;
+    background: var(--accent); color: var(--card); font-weight: 600; text-decoration: none;
+  }
+  dl.files { margin: 0; }
+  dl.files dt { margin-top: 16px; font-weight: 600; }
+  dl.files dt:first-child { margin-top: 0; }
+  dl.files dt .size { color: var(--muted); font-weight: 400; font-size: 14px; }
+  dl.files dd { margin: 4px 0 0; }
+  dl.files dd ul { margin: 4px 0 0; }
+</style>
+<!-- family:head --><link rel="stylesheet" href="../family/family.css">
+<link rel="alternate" hreflang="en" href="https://azun-k2.github.io/lettrette/samples/index.html">
+<script src="../family/family.js" defer data-lang="en" data-page="samples/index.html" data-langs="en"></script>
+<!-- /family:head -->
+</head>
+<body>
+<main>
+<div class="hero">
+  <img class="icon" src="../icon-512.png" alt="" width="112" height="112">
+  <h1>Sample files</h1>
+  <p class="tagline">winmail.dat and .msg files to try in Lettrette</p>
+  <nav class="links">
+    <a href="../">Home</a>
+    <a href="../support.html">Support</a>
+    <a href="../privacy.html">Privacy policy</a>
+    <!-- family:nav --><a href="../#more-apps">More apps</a><!-- /family:nav -->
+  </nav>
+</div>
+
+<section class="card">
+  <h2>Download</h2>
+  <p>All the files in one archive, with the batch export folder:</p>
+  <p><a class="download" href="lettrette-samples.zip" download>Download lettrette-samples.zip</a> <span class="note">(0.8 MB)</span></p>
+  <p class="note">Every person, address and message in these files is made up: the addresses are at example.com, example.org and example.net, which exist for examples only. The files were written by Lettrette's own test tools, not by a mail program, and contain no real mail.</p>
+</section>
+
+<section class="card">
+  <h2>How to open them</h2>
+  <h3>On the Mac</h3>
+  <ul>
+    <li>Choose File › Open… in Lettrette, or click Open… in its welcome window, and pick a file. You can also drop files on the welcome window.</li>
+    <li>Or select a file in Finder and press Space to see it with Quick Look (turn on Lettrette's Quick Look extension first, in System Settings › General › Login Items &amp; Extensions › Quick Look).</li>
+    <li>For batch export, choose File › Batch Export…, add the <code>batch-export</code> folder, pick EML, PDF or Attachments, and click Export.</li>
+  </ul>
+  <h3>On iPhone and iPad</h3>
+  <ul>
+    <li>Tap a file below and save it to Files (or save the archive and tap it in Files to unzip it).</li>
+    <li>In Lettrette, tap Open… and pick the file; or tap the file in Files, then the Share button, and choose Lettrette.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>The files</h2>
+  <dl class="files">
+    <dt><a href="winmail.dat" download>winmail.dat</a> <span class="size">299 KB</span></dt>
+    <dd>A TNEF attachment, the kind some mail programs send instead of a normal message. Shows:
+      <ul>
+        <li>an HTML body with an inline picture (the logo, a <code>cid:</code> image) and a table;</li>
+        <li>From, To, <strong>Cc</strong> and the date;</li>
+        <li>two attachments to preview with Quick Look and save: a 3-page PDF and a photo.</li>
+      </ul>
+    </dd>
+    <dt><a href="winmail-rtf.dat" download>winmail-rtf.dat</a> <span class="size">2 KB</span></dt>
+    <dd>A TNEF message whose body is <strong>compressed RTF</strong>: bold, italic, a bulleted list, a heading in another font and colour.</dd>
+    <dt><a href="message.msg" download>message.msg</a> <span class="size">374 KB</span></dt>
+    <dd>An Outlook .msg file. Shows:
+      <ul>
+        <li>an HTML body with an inline picture;</li>
+        <li>a PDF and a photo as attachments;</li>
+        <li>an <strong>attached message</strong> (an embedded .msg, listed as “Paper samples for the spring catalogue.eml”): double-click it to open it in its own window, with its own photo attachment.</li>
+      </ul>
+    </dd>
+    <dt><a href="meeting-invite.msg" download>meeting-invite.msg</a> <span class="size">9 KB</span></dt>
+    <dd>A <strong>meeting invitation</strong> (IPM.Schedule.Meeting.Request): the invitation card with the time, place and attendees, <em>Add to Calendar</em>, and Export › Export as Calendar Event… (.ics).</dd>
+    <dt><a href="contact.msg" download>contact.msg</a> <span class="size">8 KB</span></dt>
+    <dd>A <strong>contact</strong> (IPM.Contact): the contact card with job, phones, address and web page, <em>Add to Contacts</em>, and Export › Export as Contact Card… (.vcf).</dd>
+    <dt>batch-export/ <span class="size">4 files, 329 KB</span></dt>
+    <dd>Four short messages, three .msg files and one winmail.dat, for File › Batch Export… on the Mac:
+      <ul>
+        <li><a href="batch-export/cover-photo.msg" download>cover-photo.msg</a>, with a photo;</li>
+        <li><a href="batch-export/proof-2.msg" download>proof-2.msg</a>, with a PDF;</li>
+        <li><a href="batch-export/new-logo-winmail.dat" download>new-logo-winmail.dat</a>, with a picture;</li>
+        <li><a href="batch-export/print-schedule.msg" download>print-schedule.msg</a>, text only.</li>
+      </ul>
+    </dd>
+  </dl>
+  <p class="note">Lettrette also has a sample message of its own: on the Mac, choose File › Open the Sample Message (or Open the Sample in the welcome window); on iPhone and iPad, tap Open the Sample.</p>
+</section>
+
+<footer>
+<p>Lettrette for Mac, iPhone and iPad · <a href="../">Home</a> · <a href="../support.html">Support</a> · <a href="../privacy.html">Privacy</a></p>
+</footer>
+</main>
+</body>
+</html>
