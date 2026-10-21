@@ -52,6 +52,7 @@
 <body>
 <main>
 <div class="hero">
+  <div class="hero-pill">✉️ Mở tệp winmail.dat & .msg dễ dàng · Trích xuất tệp đính kèm an toàn</div>
   <img class="icon" src="../icon-512.png" alt="" width="112" height="112">
   <h1>Lettrette</h1>
   <p class="tagline">Mở tệp winmail.dat và .msg đúng như khi được gửi.</p>
@@ -107,6 +108,42 @@
   </details><!-- /family:nav -->
   </nav>
 </div>
+<div class="demo-wrapper" id="demo">
+  <div class="lettrette-stage" role="group" aria-label="Bản demo tương tác: đọc nội dung email và trích xuất file winmail.dat">
+    <div class="lettrette-msg-card">
+      <div class="lettrette-meta">
+        <div class="lettrette-subject" id="ltSubject">Hợp đồng dịch vụ đã ký & Phụ lục triển khai</div>
+        <div class="lettrette-sender" id="ltSender">sarah.chen@enterprise-law.com · Hôm nay 10:32</div>
+      </div>
+      <div class="lettrette-body" id="ltBody">Kính gửi quý đối tác, chúng tôi xin gửi kèm văn bản hợp đồng đã ký đóng dấu, bảng tiến độ triển khai và thư mời lịch họp khởi động dự án.</div>
+      <div class="lettrette-att-list" id="ltAtts">
+        <span class="lettrette-att-chip">📄 Hop_Dong_Kinh_Doanh.pdf (1.2 MB)</span>
+        <span class="lettrette-att-chip">📊 Tien_Do_Chi_Tiet.xlsx (420 KB)</span>
+        <span class="lettrette-att-chip">📅 Lich_Hop_Kickoff.ics (4 KB)</span>
+      </div>
+    </div>
+    <div class="demo-controls">
+      <button class="tockette-action-btn" id="ltExtractBtn">Trích xuất tất cả tệp</button>
+    </div>
+    <span class="demo-hint">💡 Bấm Trích xuất tất cả tệp để trải nghiệm mở file offline không cần tải lên mạng</span>
+  </div>
+  <p class="demo-note">Mô phỏng trực quan. Trên Mac, iPhone và iPad, Lettrette giải mã winmail.dat và MSG 100% bảo mật ngoại tuyến.</p>
+</div>
+<script>
+(function() {
+  var btn = document.getElementById('ltExtractBtn');
+  var isDone = false;
+  btn.addEventListener('click', function() {
+    if (isDone) return;
+    btn.textContent = "✓ Đã lưu 3 tệp vào máy";
+    isDone = true;
+    setTimeout(function() {
+      btn.textContent = "Trích xuất tất cả tệp";
+      isDone = false;
+    }, 2800);
+  });
+})();
+</script>
 
 <!-- family:shot --><figure class="shot"><img src="../img/hero.jpg" alt="" width="1600" height="860"></figure><!-- /family:shot -->
 <section class="card">
@@ -123,6 +160,48 @@
   <p class="note">Yêu cầu macOS 14 Sonoma trở lên; trên iPhone và iPad, iOS và iPadOS 17 trở lên.</p>
 </section>
 
+<section class="card comparison-card" id="comparison">
+  <h2>Trang web chuyển đổi online so với Lettrette</h2>
+  <p class="section-lead">Mở tệp winmail.dat và email Outlook .msg an toàn tuyệt đối, không sợ lộ bí mật kinh doanh.</p>
+  <div class="table-scroll">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Đặc tính</th>
+          <th>Trang web convert online</th>
+          <th class="highlight-col">Lettrette</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bảo mật tài liệu</strong></td>
+          <td>Tải hợp đồng cơ mật lên máy chủ lạ trên mạng</td>
+          <td class="highlight-col"><strong>100% giải mã ngoại tuyến trên Mac, không bao giờ gửi ra ngoài</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Tệp đính kèm</strong></td>
+          <td>Thường bỏ sót ảnh nhúng trong thư và lịch hẹn .ics</td>
+          <td class="highlight-col"><strong>Trích xuất đầy đủ tất cả tài liệu, ảnh nhúng, danh thiếp và lịch</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Định dạng văn bản</strong></td>
+          <td>Lỗi font chữ tiếng Việt, mất bảng biểu RTF và HTML</td>
+          <td class="highlight-col"><strong>Hiển thị chuẩn xác từng dòng thư, bảng biểu và màu chữ Outlook</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Giới hạn dung lượng</strong></td>
+          <td>Bắt trả phí khi tệp to hoặc bắt nhập mã captcha phiền phức</td>
+          <td class="highlight-col"><strong>Không giới hạn dung lượng tệp, mua một lần dùng trọn đời</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Thao tác kéo thả</strong></td>
+          <td>Phải chờ tải file zip về máy rồi giải nén lằng nhằng</td>
+          <td class="highlight-col"><strong>Kéo thả trực tiếp từng file đính kèm ra màn hình Desktop</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 <section class="card">
   <h2>Quyền riêng tư trong một đoạn</h2>
   <p>Lettrette không bao giờ kết nối Internet. Hình ảnh từ xa trong thư không bao giờ được tải, và không gì bạn mở rời khỏi thiết bị của bạn. Không có tài khoản, không theo dõi, không phân tích và không thu thập dữ liệu nào. <a href="privacy.html">Chính sách quyền riêng tư</a> đầy đủ nói điều tương tự, chi tiết hơn.</p>

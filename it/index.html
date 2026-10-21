@@ -52,6 +52,7 @@
 <body>
 <main>
 <div class="hero">
+  <div class="hero-pill">✉️ Open winmail.dat & .msg files · Extract attachments safely</div>
   <img class="icon" src="../icon-512.png" alt="" width="112" height="112">
   <h1>Lettrette</h1>
   <p class="tagline">Apri i file winmail.dat e .msg, così come sono stati inviati.</p>
@@ -107,6 +108,42 @@
   </details><!-- /family:nav -->
   </nav>
 </div>
+<div class="demo-wrapper" id="demo">
+  <div class="lettrette-stage" role="group" aria-label="Interactive demo: winmail.dat and Outlook .msg attachment extractor">
+    <div class="lettrette-msg-card">
+      <div class="lettrette-meta">
+        <div class="lettrette-subject" id="ltSubject">Signed Master Agreement & Specifications</div>
+        <div class="lettrette-sender" id="ltSender">sarah.chen@enterprise-law.com · Today 10:32 AM</div>
+      </div>
+      <div class="lettrette-body" id="ltBody">Hello team, please find attached the countersigned master agreement, schedule deliverables, and the kickoff calendar event.</div>
+      <div class="lettrette-att-list" id="ltAtts">
+        <span class="lettrette-att-chip">📄 Master_Agreement_Signed.pdf (1.2 MB)</span>
+        <span class="lettrette-att-chip">📊 Technical_Schedule.xlsx (420 KB)</span>
+        <span class="lettrette-att-chip">📅 Kickoff_Meeting.ics (4 KB)</span>
+      </div>
+    </div>
+    <div class="demo-controls">
+      <button class="tockette-action-btn" id="ltExtractBtn">Extract All Attachments</button>
+    </div>
+    <span class="demo-hint">💡 Click Extract All Attachments to test one-click extraction without cloud uploads</span>
+  </div>
+  <p class="demo-note">Visual simulation. On Mac, iPhone and iPad, Lettrette parses TNEF and MSG files 100% offline with zero data leakage.</p>
+</div>
+<script>
+(function() {
+  var btn = document.getElementById('ltExtractBtn');
+  var isDone = false;
+  btn.addEventListener('click', function() {
+    if (isDone) return;
+    btn.textContent = "✓ 3 Files Saved to Finder";
+    isDone = true;
+    setTimeout(function() {
+      btn.textContent = "Extract All Attachments";
+      isDone = false;
+    }, 2800);
+  });
+})();
+</script>
 
 <!-- family:shot --><figure class="shot"><img src="../img/hero.jpg" alt="" width="1600" height="860"></figure><!-- /family:shot -->
 <section class="card">
@@ -123,6 +160,48 @@
   <p class="note">Richiede macOS 14 Sonoma o versione successiva; su iPhone e iPad, iOS e iPadOS 17 o versione successiva.</p>
 </section>
 
+<section class="card comparison-card" id="comparison">
+  <h2>Sketchy online converters vs Lettrette</h2>
+  <p class="section-lead">Open winmail.dat and Outlook .msg files with complete privacy and zero data leakage.</p>
+  <div class="table-scroll">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>Online File Upload Sites</th>
+          <th class="highlight-col">Lettrette</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Confidentiality</strong></td>
+          <td>Uploading sensitive corporate files to unknown servers</td>
+          <td class="highlight-col"><strong>100% offline parser running strictly on your local device</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Attachment Extraction</strong></td>
+          <td>Web converters drop inline images and calendar invites</td>
+          <td class="highlight-col"><strong>Extracts every attachment, embedded image, and .ics calendar</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Formatting Fidelity</strong></td>
+          <td>Renders garbled text and strips formatted tables</td>
+          <td class="highlight-col"><strong>Faithful RTF and HTML email body rendering as sent by Outlook</strong></td>
+        </tr>
+        <tr>
+          <td><strong>File Limits & Cost</strong></td>
+          <td>Paywalls, file size limits, and captcha hurdles</td>
+          <td class="highlight-col"><strong>Unlimited file sizes, no recurring fees, instant offline opening</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Drag & Drop</strong></td>
+          <td>Tedious browser downloads and temporary zip folders</td>
+          <td class="highlight-col"><strong>Drag extracted attachments straight to your desktop or Finder</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 <section class="card">
   <h2>La privacy in un paragrafo</h2>
   <p>Lettrette non si connette mai a internet. Le immagini remote di un messaggio non vengono mai caricate, e niente di ciò che apri lascia il tuo dispositivo. Nessun account, nessun tracciamento, nessuna analisi, e non viene raccolto alcun dato. L’<a href="privacy.html">informativa sulla privacy</a> completa dice lo stesso più nel dettaglio.</p>
